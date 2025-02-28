@@ -1,41 +1,263 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #21222c;
+  display: flex;
+  flex-direction: column;
 }
 
 /* 👇👇👇 Paste the styles of your Fancy Robot from the "Position it right" assignment here 👇👇👇 */
 
 .robot-container {
+  margin: auto;
+  position: relative;
 }
-
 .robot-face-shape {
+  position: relative;
+  width: 800px;
+  height: 700px;
+  background: linear-gradient(#2980b9, #6dd5fa);
+  margin: 150px auto 0;
+  border: 15px solid aquamarine;
+  border-radius: 75px;
 }
-
 .robot-eye-left {
+  position: absolute;
+  top: 130px;
+  left: 130px;
+  width: 20%;
+  height: 150px;
+  background-image: url(https://picsum.photos/200/300?grayscale);
+  border-radius: 5% / 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: box-scale 2s infinite alternate;
 }
-
 .robot-eye-right {
+  position: relative;
+  width: 200px;
+  height: 35px;
+  top: 230px;
+  left: 380px;
+  background-color: MediumSeaGreen;
+  animation: eye-right 4s infinite linear;
 }
 
+/* ear right and left */
 .robot-ear-left {
+  position: absolute;
+  top: 370px;
+  right: 820px;
+  width: 0px;
+  height: 0px;
+  border: 80px solid SlateBlue;
+  border-right-color: transparent;
+  border-radius: 80px;
+  animation: ear-left-move 2s infinite alternate;
 }
-
 .robot-ear-right {
+  position: absolute;
+  top: 350px;
+  left: 820px;
+  width: 0px;
+  height: 0px;
+  border: 80px solid red;
+  border-radius: 80px;
+  border-left-color: transparent;
+  animation: ear-right-rotate 2s infinite alternate;
 }
-
+/* ---------------------------------------------- */
 .robot-nose {
+  position: absolute;
+  top: 330px;
+  left: 280px;
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(#636363, #a2ab58);
+  opacity: 50%;
+  border-radius: 100px / 50px;
+  transition: all 2s ease-in-out;
 }
 
-.robot-nose:before {
-}
-
-.robot-nose:after {
-}
-
+/* teeeethhhhhhhhhhhhhhhhhhhhhhh */
 .robot-teeth {
+  position: relative;
+  margin: auto;
+  width: 360px;
+  height: 200px;
+  top: 450px;
 }
 
 .robot-tooth {
+  margin: 15px auto 0;
+  animation: robot-tooth 2s infinite alternate;
 }
 
+.first {
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 50px;
+  background: Violet;
+  transform: skew(0deg, -6deg);
+}
+.sec {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  height: 40px;
+  width: 50px;
+  background: white;
+  transform: skew(0deg, 6deg);
+}
+
+.third {
+  position: absolute;
+  left: 120px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid MediumSeaGreen;
+  border-bottom: 25px solid transparent;
+}
+.fourth {
+  position: absolute;
+  top: 0;
+  left: 175px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid red;
+  border-bottom: 25px solid transparent;
+}
+.five {
+  position: absolute;
+  top: 0;
+  left: 240px;
+  height: 40px;
+  width: 50px;
+  background: Tomato;
+  transform: skew(0deg, -6deg);
+}
+.six {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  height: 40px;
+  width: 50px;
+  background: Orange;
+  transform: skew(0deg, 6deg);
+}
+.first:nth-child(7) {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: 40px;
+  width: 50px;
+  background: Violet;
+  transform: skew(0deg, -6deg);
+}
+.sec:nth-child(8) {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  height: 40px;
+  width: 50px;
+  background: white;
+  transform: skew(0deg, 6deg);
+}
+.third:nth-child(9) {
+  position: absolute;
+  left: 120px;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid MediumSeaGreen;
+  border-bottom: 25px solid transparent;
+}
+.fourth:nth-child(10) {
+  position: absolute;
+  top: 60px;
+  left: 175px;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid red;
+  border-bottom: 25px solid transparent;
+}
+
+.five:nth-child(11) {
+  position: absolute;
+  top: 60px;
+  left: 240px;
+  height: 40px;
+  width: 50px;
+  background: Tomato;
+  transform: skew(0deg, -6deg);
+}
+.six:nth-child(12) {
+  position: absolute;
+  top: 60px;
+  left: 300px;
+  height: 40px;
+  width: 50px;
+  background: Orange;
+  transform: skew(0deg, 6deg);
+}
+
+/* aiirrrrrrrrrrrrrrr */
 .robot-hair-style {
+  position: absolute;
+  width: 550px;
+  height: 120px;
+  top: 20px;
+  left: 220px;
+  animation: air-style 2s infinite alternate;
+}
+
+.robot-hair-one {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 75px;
+  background-color: yellow;
+  animation: hair-one-move 3s infinite alternate;
+}
+.robot-hair-one:nth-child(5) {
+  left: 300px;
+}
+
+.robot-hair-two {
+  position: absolute;
+  height: 90px;
+  width: 70px;
+  top: 35px;
+  animation: hair-two-move 2s infinite alternate;
+}
+.robot-hair-two:nth-child(2) {
+  background-color: brown;
+  left: 60px;
+}
+.robot-hair-two:nth-child(4) {
+  background-color: brown;
+  left: 220px;
+}
+
+.robot-hair-three {
+  position: absolute;
+  left: 140px;
+  width: 70px;
+  height: 120px;
+  top: 5px;
+  background-color: Violet;
+  animation: robot-hair-three 1s infinite alternate;
 }
